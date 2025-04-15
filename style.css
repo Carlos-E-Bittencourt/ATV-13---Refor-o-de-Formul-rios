@@ -8,7 +8,7 @@
     color: white;
     align-items: center;
     justify-content: center;
-
+    font-size: 30px;
 
     display: flex;
 }
@@ -17,9 +17,50 @@ body{
     padding: 0;
     margin: 0;
     background-color: black;
+
 }
 
 #icon{
     height: 80px;
     margin: 10px;
+}
+
+#main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs{
+    margin: 0.5%;
+    height: 25px;
+    border-radius: 10px;
+    width: 90%;
+    background-color: #2e3d68;
+    color: white;
+    
+}
+
+#suarez{
+    height: 849px;
+}
+
+.scroll{
+    max-height: 853px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.scroll::-webkit-scrollbar{
+    width: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 10px;
+}
+
+#form{
+    width: 100%;
 }
