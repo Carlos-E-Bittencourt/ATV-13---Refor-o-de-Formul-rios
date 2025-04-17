@@ -31,10 +31,16 @@
                         <input type="text" class="inputs" placeholder="Insira seu nome" id="nome" name="nome" required>
     
                         <br>
-    
+                        
                         <label for="nascimento">Data de Nascimento: </label>
                         <br>
                         <input type="date" class="inputs" id="nascimento" name="nascimento" required>
+
+                        <br>
+
+                        <label for="cpf">CPF</label>
+                        <br>
+                        <input type="number" class="inputs" name="cpf" required>
     
                         <br>
     
@@ -84,16 +90,122 @@
 
                         <br>
 
+                        <label for="CEP">CEP</label>
+                        <br>
+                        <input type="number" class="inputs" name="CEP" required>
+
+                        <br>
+
                         <label for="color">Qual cor você prefere entre as demais?(pergunta eliminatória)</label>
                         <br>
-                        <input type="radio" name="color">
+                        <input type="radio" name="color1">
                         <label for="color">Azul</label>
-                        <input type="radio" name="color">
+                        <input type="radio" name="color2">
                         <label for="color">Vermelho</label>
-                        <input type="radio" name="color">
+                        <input type="radio" name="color3">
                         <label for="color">Verde</label>
-                        <input type="color" name="color">
+                        <input type="color" name="color4">
                         <label for="color">Outro</label>
+                        <br>
+                        
+
+                        <h3>Questionário</h3>
+                        <label for="mundial">1. Quando Grêmio foi campeão mundial?</label>
+                        <br>
+                        <input type="radio" name="mundial" id="opc1mund">
+                        <label for="1995">1995</label>
+                        <br>
+                        <input type="radio" name="mundial" id="opc2mund">
+                        <label for="1983">1983</label>
+                        <br>
+                        <input type="radio" name="mundial" id="opc3mund">
+                        <label for="1986">1986</label>
+                        <br>
+                        <input type="radio" name="mundial" id="opc4mund">
+                        <label for="1981">1981</label>
+
+
+                        <br>
+
+
+                        <label for="libertadores">2. Em que anos o Grêmio ganhou a Libertadores?</label>
+                        <br>
+                        <input type="radio" name="libertadores" id="opc1liberta">
+                        <label for="199519992004">1995, 1999, 2004</label>
+                        <br>
+                        <input type="radio" name="libertadores" id="opc2liberta">
+                        <label for="198319952017">1983, 1995 e 2017</label>
+                        <br>
+                        <input type="radio" name="libertadores" id="opc3liberta">
+                        <label for="197619832016">1976, 1983, 2016</label>
+                        <br>
+                        <input type="radio" name="libertadores" id="opc4liberta">
+                        <label for="198119942018">1981, 1994, 2018</label>
+
+
+                        <br>
+
+
+                        <label for="brasil">3. Quantos Brasileirões o Grêmio tem?</label>
+                        <br>
+                        <input type="radio" name="brasil" id="opc1brasil">
+                        <label for="1">1</label>
+                        <br>
+                        <input type="radio" name="brasil" id="opc2brasil">
+                        <label for="0">0</label>
+                        <br>
+                        <input type="radio" name="brasil" id="opc3brasil">
+                        <label for="3">3</label>
+                        <br>
+                        <input type="radio" name="brasil" id="opc4brasil">
+                        <label for="2">2</label>
+
+
+                        <br>
+
+
+                        <label for="adversario">4. Quem foi o adversário do Grêmio na final da Libertadores de 2017?</label>
+                        <br>
+                        <input type="radio" name="adversario" id="opc1adver">
+                        <label for="boca">Boca Juniors</label>
+                        <br>
+                        <input type="radio" name="adversario" id="opc2adver">
+                        <label for="river">River Plate</label>
+                        <br>
+                        <input type="radio" name="adversario" id="opc3adver">
+                        <label for="lanus">Lanús</label>
+                        <br>
+                        <input type="radio" name="adversario" id="opc4adver">
+                        <label for="flamengo">Flamengo</label>
+
+
+                        <br>
+
+
+                        <label for="fund">5. Em que ano o Grêmio foi fundado?</label>
+                        <br>
+                        <input type="radio" name="fund" id="opc1fund">
+                        <label for="1895">1895</label>
+                        <br>
+                        <input type="radio" name="fund" id="opc2fund">
+                        <label for="1903">1903</label>
+                        <br>
+                        <input type="radio" name="fund" id="opc3fund">
+                        <label for="1912">1912</label>
+                        <br>
+                        <input type="radio" name="fund" id="opc4fund">
+                        <label for="1920">1920</label>
+                        <br>
+                        <input type="button" class="buttons" value="Salvar Respostas" onclick="passouOunao()">
+                        <br>
+
+                        <label for="torcida">Selecione qual torcida você irá frequntar durante os jogos: </label>
+                        <select name="torcida" class="inputs" id="torcida">
+
+                            <option value="Selecione" disabled selected>Selecione uma opção</option>
+                            <option value="Geral">Geral</option>
+                            <option value="Torcidanormal">Torcida normal</option>
+                        </select>
                     </form>
                 </div>
                 </div>

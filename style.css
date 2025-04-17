@@ -22,6 +22,10 @@ body{
 
 }
 
+.flex{
+    display: flex;
+}
+
 #icon{
     height: 80px;
     margin: 10px;
@@ -35,15 +39,23 @@ body{
 }
 
 .inputs{
-    margin: 0.5%;
+    margin: 1%;
     height: 25px;
-    border-radius: 10px;
+    border-radius: 6px;
     width: 90%;
     background-color: #2e3d68;
     color: white;
     border: none;
     box-shadow: none;
     
+}
+
+.buttons{
+    margin: 1%;
+    height: 25px;
+    border-radius: 6px;
+    background-color: #2e3d68;
+    color: white;
 }
 
 #suarez{
