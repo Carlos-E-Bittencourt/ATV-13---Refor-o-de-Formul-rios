@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
 
     <title>Formulário</title>
 </head>
@@ -209,6 +209,61 @@
                         <br>
 
                         <label for="odiar">Quanto você odeia o Inter?</label>
+                        <br>
+                        <input type="range" id="odiar" name="odiar" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
+                        <output>0</output>
+                        <br>
+
+
+                        <label for="Time">Melhor Time do Mundo</label>
+                        <select name="time" id="time" class="inputs">
+                            <option value="select" disabled selected>Selecione</option>
+                            <option value="atletico-mg">Atlético Mineiro</option>
+                            <option value="bahia">Bahia</option>
+                            <option value="botafogo">Botafogo</option>
+                            <option value="corinthians">Corinthians</option>
+                            <option value="cruzeiro">Cruzeiro</option>
+                            <option value="flamengo">Flamengo</option>
+                            <option value="fluminense">Fluminense</option>
+                            <option value="gremio">Grêmio</option>
+                            <option value="internacional">Internacional</option>
+                            <option value="palmeiras">Palmeiras</option>
+                            <option value="portuguesa">Portuguesa</option>
+                            <option value="santos">Santos</option>
+                            <option value="sao-paulo">São Paulo</option>
+                        </select>
+                        <br>
+
+
+                        <label for="opiniAlanText">O que você acha do Alan Patrick?</label>
+                        <br>
+                        <input type="text" class="inputs" id="opini" name="opini" placeholder="Insira sua opinião">
+                        <br>
+
+                        <label for="notaAlan">Dê uma nota de 0 a 10 para o Alan Patrick: </label>
+                        <br>
+                        <input type="range" id="odiar" name="odiar" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
+                        <output>0</output>
+                        <br>
+
+                        <label for="luan">O que o Luan é: </label>
+                        <br>
+                        <select name="luan" id="luan" class="inputs">
+                            <option value="selecione" disabled selected>Selecione</option>
+                            <option value="craque">Craque</option>
+                            <option value="lixo">Lixo</option>
+                            <option value="ruim">Ruim</option>
+                            <option value="foda">MUITO FO**</option>
+                            <option value="melhor">MELHOR DO MUNDO</option>
+                        </select>
+                        <br>
+
+                        <label for="opiniLuanText">O que você acha do Luan?</label>
+                        <br>
+                        <input type="text" class="inputs" id="opiniLuan" name="opiniLuan" placeholder="Insira sua opinião">
+                        <br>
+
+                        <label for="notaLuan">O que você acha do Luan?</label>
                         <br>
                         <input type="range" id="odiar" name="odiar" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
                         <output>0</output>
