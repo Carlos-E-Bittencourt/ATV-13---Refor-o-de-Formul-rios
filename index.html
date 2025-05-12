@@ -40,7 +40,7 @@
 
                         <label for="cpf">CPF</label>
                         <br>
-                        <input type="number" class="inputs" name="cpf" required>
+                        <input type="number" id="cpf" class="inputs" name="cpf" required>
     
                         <br>
     
@@ -84,9 +84,14 @@
     
                         <br>
     
-                        <label for="rua">Rua e Número da Casa: </label>
+                        <label for="rua">Rua: </label>
                         <br>
                         <input type="text" class="inputs" id="rua" nama="rua" required>
+                        <br>
+
+                        <label for="numeroCasa">Número da Casa: </label>
+                        <br>
+                        <input type="text" class="inputs" id="numeroCasa" name="numeroCasa" required>
 
                         <br>
 
@@ -98,14 +103,14 @@
 
                         <label for="color">Qual cor você prefere entre as demais?(pergunta eliminatória)</label>
                         <br>
-                        <input type="radio" name="color1">
-                        <label for="color">Azul</label>
-                        <input type="radio" name="color2">
-                        <label for="color">Vermelho</label>
-                        <input type="radio" name="color3">
-                        <label for="color">Verde</label>
-                        <input type="color" name="color4">
-                        <label for="color">Outro</label>
+                        <input type="radio" name="color">
+                        <label for="Azul">Azul</label>
+                        <input type="radio" name="color">
+                        <label for="Vermelho">Vermelho</label>
+                        <input type="radio" name="color">
+                        <label for="Verde">Verde</label>
+                        <input type="color" name="color">
+                        <label for="Outro">Outro</label>
                         <br>
                         
 
@@ -267,6 +272,23 @@
                         <br>
                         <input type="range" id="odiar" name="odiar" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
                         <output>0</output>
+                        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <input type="submit" id="submit" onclick="enviar()">
                     </form>
                 </div>
                 </div>
