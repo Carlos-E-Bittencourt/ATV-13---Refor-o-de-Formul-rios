@@ -28,7 +28,7 @@
                         <h3>Informações Gerais: </h3>
                         <label for="name">Nome: </label>
                         <br>
-                        <input type="text" class="inputs" placeholder="Insira seu nome" id="nome" name="nome">
+                        <input type="text" class="inputs" placeholder="Insira seu nome" id="name" name="nome">
     
                         <br>
                         
@@ -97,7 +97,7 @@
 
                         <label for="numeroCasa">Número da Casa: </label>
                         <br>
-                        <input type="text" class="inputs" id="numeroCasa" name="numeroCasa">
+                        <input type="number" class="inputs" id="numeroCasa" name="numeroCasa">
 
                         <br>
 
@@ -109,14 +109,12 @@
 
                         <label for="color">Qual cor você prefere entre as demais?(pergunta eliminatória)</label>
                         <br>
-                        <input type="radio" name="color">
+                        <input type="radio" name="color" value="Azul">
                         <label for="Azul">Azul</label>
-                        <input type="radio" name="color">
+                        <input type="radio" name="color" value="Vermelho">
                         <label for="Vermelho">Vermelho</label>
-                        <input type="radio" name="color">
+                        <input type="radio" name="color" value="Verde">
                         <label for="Verde">Verde</label>
-                        <input type="color" name="color">
-                        <label for="Outro">Outro</label>
                         <br>
                         
 
@@ -208,6 +206,7 @@
                         <label for="1920">1920</label>
                         <br>
                         <input type="button" class="buttons" value="Salvar Respostas" onclick="passouOunao()">
+                        <p>POR FAVOR CLIQUE NO BOTÂO "Salvar Respostas"</p>
                         <br>
 
                         <label for="torcida">Selecione qual torcida você irá frequntar durante os jogos: </label>
@@ -236,7 +235,7 @@
                             <option value="cruzeiro">Cruzeiro</option>
                             <option value="flamengo">Flamengo</option>
                             <option value="fluminense">Fluminense</option>
-                            <option value="gremio">Grêmio</option>
+                            <option value="gremio">Grêmio</option>                                                                                          
                             <option value="internacional">Internacional</option>
                             <option value="palmeiras">Palmeiras</option>
                             <option value="portuguesa">Portuguesa</option>
@@ -253,7 +252,7 @@
 
                         <label for="notaAlan">Dê uma nota de 0 a 10 para o Alan Patrick: </label>
                         <br>
-                        <input type="range" id="odiar" name="odiar" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
+                        <input type="range" id="notaAlan" name="notaAlan" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
                         <output>0</output>
                         <br>
 
@@ -261,10 +260,8 @@
                         <br>
                         <select name="luan" id="luan" class="inputs">
                             <option value="selecione" disabled selected>Selecione</option>
-                            <option value="craque">Craque</option>
                             <option value="lixo">Lixo</option>
                             <option value="ruim">Ruim</option>
-                            <option value="foda">MUITO FO**</option>
                             <option value="melhor">MELHOR DO MUNDO</option>
                         </select>
                         <br>
@@ -276,11 +273,11 @@
 
                         <label for="notaLuan">O que você acha do Luan?</label>
                         <br>
-                        <input type="range" id="odiar" name="odiar" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
+                        <input type="range" id="notaLuan" name="notaLuan" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
                         <output>0</output>
                         <br>
                         
-                        <input type="submit" value="Enviar" class="inputs" id="submit" onclick="validarDados()">
+                        <input type="submit" value="Enviar" class="inputs" id="submit" onclick="return validarDados()">
                         <input type="reset" value="Limpar Campos" class="inputs" id="reset" onclick="window.location='index.html'">
                     </form>
                 </div>

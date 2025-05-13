@@ -1,7 +1,38 @@
+function passouOunao(){
+    
+    const respostas = {
+        mundial: "1983",
+        libertadores: "198319952017",
+        brasil: "2",
+        adversario: "lanus",
+        fund: "1903"
+    };
+
+    let acertos = 0;
+    let passou = false;
+    let total = Object.keys(respostas).length;
+
+    for (let key in respostas) {
+        const selecionado = document.querySelector(`input[name="${key}"]:checked`);
+        
+        if (!selecionado) {
+            alert(`Você não respondeu a pergunta: ${key}`);
+            return false;
+        }
+
+        if (selecionado.value === respostas[key]) {
+            acertos++;
+        }
+    }
+
+    if (acertos > 3){
+        passou = true;
+    }
+}
+
 function validarDados() {
 
-
-    const nome = document.getElementById('nome').value.trim();
+    const nome = document.getElementById('name').value.trim();
 
     const nascimento = document.getElementById('nascimento').value.trim();
 
@@ -45,7 +76,7 @@ function validarDados() {
 
     const time = document.getElementById('time').value.trim();
 
-    const opiniAlan = document.getElementById('opiniAlan').value.trim();
+    const opiniAlan = document.getElementById('opini').value.trim();
 
     const notaAlan = document.getElementById('notaAlan').value.trim();
 
@@ -62,6 +93,8 @@ function validarDados() {
 
 
     const baseNome = /^[A-Za-zÀ-ÿ\s]+$/;
+    const baseEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const baseTelefone = /^\d{10,11}$/;
     
     if(!nome){
         alert('Por favor insira seu nome');
@@ -73,8 +106,163 @@ function validarDados() {
         return false;
     }
 
-}
+    if(!nascimento){
+        alert('Por favor insira sua data de nascimento');
+        return false;
+    }
 
-function passouOunao(){
+    if(!cpf){
+        alert('Por favor insira seu CPF')
+        return false
+    }
+
+    if(cpf.length !== 11){
+        alert('Por favor insira um cpf válido')
+    }
+
+    if (!email) {
+        alert('Por favor insira seu e-mail');
+        return false;
+    }
+
+    if (!baseEmail.test(email)) {
+        alert('Por favor insira um e-mail válido');
+        return false;
+    }
+
+    if (!senha) {
+        alert('Por favor insira sua senha');
+        return false;
+    }
+
+    if (!tel) {
+        alert('Por favor insira seu telefone');
+        return false;
+    }
+
+    if (!baseTelefone.test(tel)) {
+        alert('Telefone inválido. Deve conter apenas números e ter 10 ou 11 dígitos');
+        return false;
+    }
+
+    if (!gender) {
+        alert('Por favor selecione seu gênero');
+        return false;
+    }
+
+    if (!cidade) {
+        alert('Por favor insira sua cidade');
+        return false;
+    }
+
+    if (!baseNome.test(cidade)){
+        alert('Cidade pode ter só letra pae')
+    }
+
+    if (!estado) {
+        alert('Por favor insira seu estado');
+        return false;
+    }
     
+    if (!baseNome.test(estado)){
+        alert('Estado pode ter só letra pae')
+    }
+
+    if (!pais) {
+        alert('Por favor insira seu país');
+        return false;
+    }
+
+    if (!baseNome.test(pais)){
+        alert('País pode ter só letra pae')
+    }
+
+    if (!rua) {
+        alert('Por favor insira sua rua');
+        return false;
+    }
+
+    if (!numeroCasa) {
+        alert('Por favor insira o número da sua casa');
+        return false;
+    }
+
+    if (!cep) {
+        alert('Por favor insira seu CEP');
+        return false;
+    }
+
+    if (!color) {
+        alert('Por favor selecione uma cor');
+        return false;
+    }
+
+    if (color.value != "Azul"){
+        alert('Mermao, por que tu não prefere a cor Azul? TU NÃO É GREMISTA?')
+        return false;
+    }
+    
+    if (!torcida) {
+        alert('Por favor diga o que acha da torcida');
+        return false;
+    }
+
+    if (!odiar) {
+        alert('Por favor diga o que você mais odeia no futebol');
+        return false;
+    }
+
+    if(odiar < 10){
+        alert('PORQUE NÃO COLOCOU QUE ODEIA O INTER NO 10? TU NÃO É GREMISTA PAE?')
+        return false;
+    }
+
+    if (time.value != "gremio") {
+        alert('O GRÊMIO NÂO É O MELHOR TIME DO MUNDO PIA?');
+        return false;
+    }
+
+    if (!opiniAlan) {
+        alert('Por favor insira sua opinião sobre Alan');
+        return false;
+    }
+
+    if (!notaAlan) {
+        alert('Por favor insira uma nota para Alan');
+        return false;
+    }
+
+    if (notaAlan > 0){
+        alert('Da onde tirou que a nota do Alan Patrick é' + notaAlan);
+        return false;
+    }
+
+    if (!luan) {
+        alert('Por favor insira sua opinião sobre Luan');
+        return false;
+    }
+
+    if (luan.value != "melhor"){
+        alert('Po irmao, se tu é gremista tu precisa concordar que e o Luan é o MELHOR DO MUNDO')
+    }
+
+    if (!opiniLuan) {
+        alert('Por favor insira sua opinião sobre Luan');
+        return false;
+    }
+
+    if (!notaLuan) {
+        alert('Por favor insira uma nota para Luan');
+        return false;
+    }
+
+    if (notaLuan < 10){
+        alert('Da onde tirou que a nota do Luan é' + notaLuan);
+        return false;
+    }
+
+    if (passou != true){
+        alert('Pae tu errou alguma questão');
+        return false;
+    }
 }
