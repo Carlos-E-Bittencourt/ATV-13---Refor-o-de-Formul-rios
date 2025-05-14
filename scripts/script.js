@@ -9,7 +9,7 @@ function passouOunao(){
     };
 
     let acertos = 0;
-    let passou = false;
+    let passou = 0;
     let total = Object.keys(respostas).length;
 
     for (let key in respostas) {
@@ -25,8 +25,8 @@ function passouOunao(){
         }
     }
 
-    if (acertos > 3){
-        passou = true;
+    if (acertos >= 3){
+        passou = 1;
     }
 }
 
@@ -86,8 +86,9 @@ function validarDados() {
 
     const notaLuan = document.getElementById('notaLuan').value.trim();
 
-    console.log(nome, nascimento, cpf, email, senha, tel, gender, cidade, estado, pais, 
-    rua, numeroCasa, cep, color, mundial, libertadores, brasil, adversario, fund,
+    console.log(nome, nascimento, cpf, email, senha, tel, gender.value, cidade, estado, pais, 
+    rua, numeroCasa, cep, color.value, mundial.value, libertadores.value,
+     brasil.value, adversario.value, fund.value,
     torcida, odiar, time, opiniAlan, notaAlan, luan, opiniLuan, notaLuan);
 
 
@@ -208,7 +209,7 @@ function validarDados() {
     }
 
     if (!odiar) {
-        alert('Por favor diga o que você mais odeia no futebol');
+        alert('Por favor fale o quanto você odeia o inter');
         return false;
     }
 
@@ -217,7 +218,7 @@ function validarDados() {
         return false;
     }
 
-    if (time.value != "gremio") {
+    if (time.value.toLowerCase() != "gremio") {
         alert('O GRÊMIO NÂO É O MELHOR TIME DO MUNDO PIA?');
         return false;
     }
@@ -232,7 +233,7 @@ function validarDados() {
         return false;
     }
 
-    if (notaAlan > 0){
+    if (notaAlan.value =! 0){
         alert('Da onde tirou que a nota do Alan Patrick é' + notaAlan);
         return false;
     }
@@ -242,7 +243,7 @@ function validarDados() {
         return false;
     }
 
-    if (luan.value != "melhor"){
+    if (luan.value.toLowerCase() != "melhor"){
         alert('Po irmao, se tu é gremista tu precisa concordar que e o Luan é o MELHOR DO MUNDO')
     }
 
@@ -251,17 +252,18 @@ function validarDados() {
         return false;
     }
 
+
     if (!notaLuan) {
         alert('Por favor insira uma nota para Luan');
         return false;
     }
 
-    if (notaLuan < 10){
+    if (notaLuan.value != 10){
         alert('Da onde tirou que a nota do Luan é' + notaLuan);
         return false;
     }
 
-    if (passou != true){
+    if (passou != "1"){
         alert('Pae tu errou alguma questão');
         return false;
     }
