@@ -28,6 +28,16 @@ function passouOunao(){
     if (acertos >= 3){
         passou = 1;
     }
+
+    if (passou != "1"){
+        alert('Pae tu errou alguma questão');
+        return false;
+    }else{
+        alert('Tu passou menó');
+        return false;
+    }
+
+    
 }
 
 function validarDados() {
@@ -78,13 +88,13 @@ function validarDados() {
 
     const opiniAlan = document.getElementById('opini').value.trim();
 
-    const notaAlan = document.getElementById('notaAlan').value.trim();
+    const notaAlan = document.getElementById('notaAlan').value;
 
-    const luan = document.getElementById('luan').value.trim();
+    const luan = document.getElementById('luan').value;
 
     const opiniLuan = document.getElementById('opiniLuan').value.trim();
 
-    const notaLuan = document.getElementById('notaLuan').value.trim();
+    const notaLuan = document.getElementById('notaLuan').value;
 
     console.log(nome, nascimento, cpf, email, senha, tel, gender.value, cidade, estado, pais, 
     rua, numeroCasa, cep, color.value, mundial.value, libertadores.value,
@@ -233,18 +243,9 @@ function validarDados() {
         return false;
     }
 
-    if (notaAlan.value =! 0){
-        alert('Da onde tirou que a nota do Alan Patrick é' + notaAlan);
-        return false;
-    }
-
     if (!luan) {
         alert('Por favor insira sua opinião sobre Luan');
         return false;
-    }
-
-    if (luan.value.toLowerCase() != "melhor"){
-        alert('Po irmao, se tu é gremista tu precisa concordar que e o Luan é o MELHOR DO MUNDO')
     }
 
     if (!opiniLuan) {
@@ -252,19 +253,11 @@ function validarDados() {
         return false;
     }
 
-
     if (!notaLuan) {
         alert('Por favor insira uma nota para Luan');
         return false;
     }
 
-    if (notaLuan.value != 10){
-        alert('Da onde tirou que a nota do Luan é' + notaLuan);
-        return false;
-    }
-
-    if (passou != "1"){
-        alert('Pae tu errou alguma questão');
-        return false;
-    }
+    window.location.href = "index.html";
+    return false;
 }

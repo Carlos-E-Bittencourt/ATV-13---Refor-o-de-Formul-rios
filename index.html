@@ -24,7 +24,7 @@
                     <div style="text-align: center; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                         <h1>Cadastro de Sócio Torcedor do Grêmio</h1>
                     </div>
-                    <form>
+                    <form onsubmit="return validarDados()">
                         <h3>Informações Gerais: </h3>
                         <label for="name">Nome: </label>
                         <br>
@@ -92,7 +92,7 @@
     
                         <label for="rua">Rua: </label>
                         <br>
-                        <input type="text" class="inputs" id="rua" nama="rua">
+                        <input type="text" class="inputs" id="rua" name="rua">
                         <br>
 
                         <label for="numeroCasa">Número da Casa: </label>
@@ -205,8 +205,8 @@
                         <input type="radio" name="fund" value="1920">
                         <label for="1920">1920</label>
                         <br>
-                        <input type="button" class="buttons" value="Salvar Respostas" onclick="passouOunao()">
-                        <p>POR FAVOR CLIQUE NO BOTÂO "Salvar Respostas"</p>
+                        <input type="button" class="buttons" value="Verificar Acertos" onclick="passouOunao()">
+                        <p>POR FAVOR CLIQUE NO BOTÂO "Verificar Acertos" SE PASSOU OU NÃO</p>
                         <br>
 
                         <label for="torcida">Selecione qual torcida você irá frequntar durante os jogos: </label>
@@ -271,7 +271,7 @@
                         <input type="text" class="inputs" id="opiniLuan" name="opiniLuan" placeholder="Insira sua opinião">
                         <br>
 
-                        <label for="notaLuan">O que você acha do Luan?</label>
+                        <label for="notaLuan">Dê uma nota de 0 a 10 para o Luan</label>
                         <br>
                         <input type="range" id="notaLuan" name="notaLuan" min="0" max="10" value="0" oninput="this.nextElementSibling.value = this.value">
                         <output>0</output>
